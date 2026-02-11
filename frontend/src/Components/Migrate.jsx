@@ -2,6 +2,7 @@ import "../Styles/Migrate.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FaGlobeAmericas, FaBriefcase, FaHome, FaGraduationCap, FaCheckCircle, FaUsers, FaShieldAlt, FaClock, FaAward } from 'react-icons/fa';
+import { Helmet } from "react-helmet";
 export default function Migrate() {
   const [formData, setFormData] = useState({
     country: "",
@@ -42,6 +43,13 @@ export default function Migrate() {
   };
   return (
     <div className="migrate-page">
+      <Helmet>
+        <title>Canada PR & Immigration Services | Permanent Residency Consultants</title>
+        <meta
+          name="description"
+          content="Expert Canada PR, Australia PR & global immigration services. Personalized migration pathways, Express Entry, PNP, work permits. 98% success rate. Partner with Liba Migration Services."
+        />
+      </Helmet>
       <section className="migrate-hero">
         <div className="container">
           <div className="row align-items-center">

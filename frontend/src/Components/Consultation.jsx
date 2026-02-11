@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaUser, FaEnvelope, FaPhone, FaClipboardList, FaComments, FaCheckCircle, FaRocket } from 'react-icons/fa';
 import "../Styles/Consultation.css";
+import { Helmet } from 'react-helmet';
 
 export default function Consultation() {
 
@@ -52,6 +53,13 @@ export default function Consultation() {
 
   return (
     <div className="consultation-page">
+      <Helmet>
+        <title>Free Consultation | Book Expert Immigration & Study Abroad Guidance</title>
+        <meta
+          name="description"
+          content="Book free consultation with certified advisors. Get personalized guidance for study abroad, immigration, work permits & visa services. 24-hour response time. No hidden charges."
+        />
+      </Helmet>
       <div className="consultation-container">
         <div className="consultation-content">
           <div className="consultation-info">

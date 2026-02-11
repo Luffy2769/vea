@@ -2,10 +2,18 @@ import React from 'react';
 import { FaGraduationCap, FaBookOpen, FaUsers, FaClock, FaTrophy, FaChartLine } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import '../Styles/Coaching.css';
+import { Helmet } from 'react-helmet';
 
 export default function Coaching() {
   return (
     <div className="coaching-page">
+      <Helmet>
+        <title>IELTS Coaching & English Language Training | 95% Success Rate</title>
+        <meta
+          name="description"
+          content="Expert IELTS, TOEFL, PTE coaching with 95% success rate. 500+ students trained. Average band score 8.5. One-on-one & group classes. Mock tests, speaking practice & exam strategies."
+        />
+      </Helmet>
       {/* HERO */}
       <section className="coaching-hero">
         <div className="container">

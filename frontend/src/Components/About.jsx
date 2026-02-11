@@ -13,10 +13,18 @@ import {
 } from "react-icons/fa";
 import "../Styles/About.css";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 export default function About() {
   return (
     <div className="about-page">
+      <Helmet>
+        <title>About VE-Scholars | 10+ Years Education & Migration Expertise</title>
+        <meta
+          name="description"
+          content="VE-Scholars: 10+ years in international migration, 35+ years academic coaching. 500+ successful students & PR approvals. Expert guidance for Canada PR, study abroad & global opportunities."
+        />
+      </Helmet>
       {/* Hero Section */}
       <section className="about-hero">
         <div className="container">

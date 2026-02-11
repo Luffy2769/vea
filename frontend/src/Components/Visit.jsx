@@ -2,10 +2,18 @@ import React from 'react';
 import { FaPlane, FaPassport, FaCalendarAlt, FaMapMarkedAlt, FaUserFriends, FaShieldAlt, FaClock, FaGlobe } from 'react-icons/fa';
 import '../Styles/Visit.css';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 export default function Visit() {
   return (
     <div className="visit-page">
+      <Helmet>
+        <title>Tourist & Visit Visa Services | USA, Canada, UK, Schengen Visa</title>
+        <meta
+          name="description"
+          content="Tourist, business & family visit visa services for 50+ countries. 95% success rate. Fast processing for USA B1/B2, Canada TRV, UK visitor visa, Schengen visa. 1000+ happy travelers."
+        />
+      </Helmet>
       {/* Hero Section */}
       <section className="visit-hero">
         <div className="container">

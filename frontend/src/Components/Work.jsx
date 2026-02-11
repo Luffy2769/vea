@@ -1,10 +1,18 @@
 import "../Styles/Work.css";
 import { Link } from "react-router-dom";
 import { MdWork, MdPublic, MdAttachMoney, MdTrendingUp, MdCardTravel, MdDescription, MdCheckCircle } from 'react-icons/md';
+import { Helmet } from "react-helmet";
 
 export default function Work() {
   return (
     <div className="work-page">
+      <Helmet>
+        <title>Work Abroad Visa Services | Canada, Australia, UK, USA Work Permits</title>
+        <meta
+          name="description"
+          content="Work visa assistance for Canada LMIA, Australia TSS 482, UK Skilled Worker, USA H1B. 92% success rate. Job search support, documentation & PR pathways. 500+ work visas processed."
+        />
+      </Helmet>
       <section className="work-hero">
         <div className="container">
           <div className="row align-items-center">

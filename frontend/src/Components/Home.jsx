@@ -14,8 +14,10 @@ import {
 
 import "../Styles/Home.css";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 export default function Home() {
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -62,6 +64,13 @@ export default function Home() {
   };
   return (
     <>
+    <Helmet>
+        <title>Study Abroad Consultancy in India | Canada PR & Study Visa – Vidya Education</title>
+        <meta
+          name="description"
+          content="Expert guidance for Canada PR and study visa from India. Vidya Education Abroad helps students achieve global education goals."
+        />
+      </Helmet>
       {/* Mobile Form Popup */}
       <div className={`form-popup-overlay ${showPopup ? 'active' : ''}`} onClick={() => setShowPopup(false)}>
         <div className="form-popup-content" onClick={(e) => e.stopPropagation()}>

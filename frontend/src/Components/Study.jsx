@@ -1,9 +1,17 @@
 import "../Styles/Study.css";
 import { FaGraduationCap, FaGlobe, FaBriefcase, FaUsers, FaBookOpen, FaFileAlt, FaHandshake, FaPlane } from 'react-icons/fa';
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 export default function Study() {
   return (
     <div className="study-page">
+      <Helmet>
+        <title>Study Abroad Consultants | Top Universities in Canada, UK, USA, Australia</title>
+        <meta
+          name="description"
+          content="Expert study abroad guidance for 500+ partner universities. 95% visa success rate. Complete support from university selection to visa approval. Study in Canada, UK, USA, Australia & more."
+        />
+      </Helmet>
 
       {/* HERO */}
       <section className="study-hero">

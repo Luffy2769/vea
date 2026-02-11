@@ -2,10 +2,18 @@ import React from 'react';
 import { FaGlobeAmericas, FaBriefcase, FaHome, FaUsers, FaCheckCircle, FaShieldAlt, FaClock, FaHandshake, FaAward, FaPassport, FaPlane } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import '../Styles/LibaMigration.css';
+import { Helmet } from 'react-helmet';
 
 export default function LibaMigration() {
   return (
     <div className="liba-page">
+      <Helmet>
+        <title>Liba Migration Services | Canada PR, Work Permits & Immigration Experts</title>
+        <meta
+          name="description"
+          content="Liba Migration Services - Sister concern of VE-Scholars. 8+ years expertise in Canada PR, work permits, family sponsorship & global immigration. 500+ families settled. 98% success rate."
+        />
+      </Helmet>
       {/* Hero Section */}
       <section className="liba-hero">
         <div className="container">

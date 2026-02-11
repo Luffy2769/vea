@@ -1,10 +1,18 @@
 import "../Styles/Visa.css";
 import { Link } from "react-router-dom";
 import { FaPlane, FaGraduationCap, FaBriefcase, FaHome, FaUserTie, FaShieldAlt, FaClock, FaCheckCircle } from 'react-icons/fa';
+import { Helmet } from 'react-helmet';
 
 export default function Visa() {
   return (
     <div className="visa-page">
+      <Helmet>
+        <title>Visa Services | Study, Work, Tourist, PR & Business Visa Consultants</title>
+        <meta
+          name="description"
+          content="Complete visa services for study, work, tourist, PR & business visas. 95%+ approval rate. Expert documentation, interview prep & fast processing. Certified immigration consultants."
+        />
+      </Helmet>
       <section className="visa-hero">
         <div className="container">
           <div className="row align-items-center text-center">
