@@ -25,7 +25,7 @@ export default function Visit() {
                   <span className="stat-label visit-stat-label">Success Rate</span>
                 </div>
                 <div className="stat-item">
-                  <span className="stat-number">10K+</span>
+                  <span className="stat-number">1000+</span>
                   <span className="stat-label visit-stat-label">Happy Travelers</span>
                 </div>
               </div>
@@ -140,11 +140,29 @@ export default function Visit() {
               </div>
             </div>
             <div className="destination-item">
+              <div className="destination-flag">🇳🇿</div>
+              <h4>New Zealand</h4>
+              <p>Visitor Visa</p>
+              <div className="destination-info">
+                <span><FaClock /> 20-30 days</span>
+                <span><FaCalendarAlt /> Up to 5 years</span>
+              </div>
+            </div>
+            <div className="destination-item">
               <div className="destination-flag">🇪🇺</div>
-              <h4>Schengen Area</h4>
-              <p>Short-stay Schengen Visa</p>
+              <h4>Europe</h4>
+              <p>Schengen Visa</p>
               <div className="destination-info">
                 <span><FaClock /> 10-15 days</span>
+                <span><FaCalendarAlt /> Up to 5 years</span>
+              </div>
+            </div>
+            <div className="destination-item">
+              <div className="destination-flag">🇮🇪</div>
+              <h4>Ireland</h4>
+              <p>Short Stay Visa</p>
+              <div className="destination-info">
+                <span><FaClock /> 15-20 days</span>
                 <span><FaCalendarAlt /> Up to 5 years</span>
               </div>
             </div>

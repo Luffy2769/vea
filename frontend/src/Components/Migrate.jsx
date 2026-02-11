@@ -223,6 +223,27 @@ export default function Migrate() {
         </div>
       </section>
 
+      {/* Liba Migration Highlight Section */}
+      <section className="liba-highlight-section py-5">
+        <div className="container">
+          <div className="liba-highlight-box">
+            <div className="row align-items-center">
+              <div className="col-lg-8">
+                <h3 className="liba-highlight-title">🌍 Liba Migration Services</h3>
+                <p className="liba-highlight-text">
+                  Partner with our sister concern, Liba Migration Services, for specialized Canada PR, Work Permits, and global immigration solutions. Expert guidance, transparent process, and proven success.
+                </p>
+              </div>
+              <div className="col-lg-4 text-lg-end text-center mt-3 mt-lg-0">
+                <Link to="/LibaMigration" className="liba-highlight-btn">
+                  Explore Liba Services →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="cta-section py-5">
         <div className="container text-center">
           <h2 className="display-5 fw-bold mb-4">Ready to Start Your Migration Journey?</h2>

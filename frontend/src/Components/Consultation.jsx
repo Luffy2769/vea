@@ -59,7 +59,7 @@ export default function Consultation() {
               <FaRocket className="header-icon" />
               <h1>Start Your Journey Today</h1>
             </div>
-            <p className="info-description">
+            <p className="info-description text-white">
               Connect with our expert consultants and take the first step towards your dream destination. We're here to guide you every step of the way.
             </p>
             <div className="info-features">
@@ -124,7 +124,7 @@ export default function Consultation() {
                   <input
                     type="tel"
                     name="phone"
-                    placeholder="+1 (555) 000-0000"
+                    placeholder="+91 (555) 000-0000"
                     value={formData.phone}
                     onChange={handleChange}
                     required

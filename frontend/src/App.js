@@ -13,6 +13,8 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 import { useEffect } from "react";
 import "./App.css";
 import Consultation from "./Components/Consultation.jsx";
+import LibaMigration from "./Components/LibaMigration.jsx";
+import FloatingLibaButton from "./Components/FloatingLibaButton.jsx";
 
 // Fonts
 <style>
@@ -32,9 +34,10 @@ function ScrollToTop() {
 
 function App() {
   return (
-    <Router basename="/VidyaEducationAbroad">
+    <Router basename="/vea">
       <div className="App">
         <ScrollToTop />
+        <FloatingLibaButton />
         <header className="App-header sticky-top">
           <Header />
           <Navbar />
@@ -49,6 +52,7 @@ function App() {
           <Route path="/visit" element={<Visit />} />
           <Route path="/about" element={<About />} />
           <Route path="/consultationForm" element={<Consultation />} />
+          <Route path="/LibaMigration" element={<LibaMigration />} />
         </Routes>
         <footer className="App-footer">
           <Footer />

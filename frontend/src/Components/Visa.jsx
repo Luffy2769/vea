@@ -204,6 +204,10 @@ export default function Visa() {
                   </div>
                 </div>
               </div>
+              <div className="visa-process-note mt-5 p-4 bg-light rounded">
+                <h5 className="text-center mb-3">At VE-Scholars, we don't just process applications - we build futures.</h5>
+                <p className="text-center mb-0">Your global journey deserves structured guidance, experienced leadership, and a partner who understands both education and migration. We are committed to making your international transition seamless, successful, and secure.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -214,7 +218,7 @@ export default function Visa() {
           <div className="row">
             <div className="col-lg-8 mx-auto text-center">
               <h2 className="mb-4">Need Help Choosing the Right Visa?</h2>
-              <p className="lead mb-4">Our visa experts are ready to guide you through the entire process</p>
+              <p className="lead mb-4 text-white">Our visa experts are ready to guide you through the entire process</p>
               <Link to="/consultationForm" className="btn btn-light btn-lg">Talk to Our Visa Experts</Link>
             </div>
           </div>

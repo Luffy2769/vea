@@ -92,3 +92,24 @@
   color: #1d4e50 !important;
   transform: translateY(-2px);
 }
+
+.visa-process-note h5 {
+  font-size: 1.5rem;
+  color: #1d4e50;
+}
+
+.visa-process-note p {
+  font-size: 1.1rem;
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+@media (min-width: 992px) {
+  .visa-process-note h5 {
+    font-size: 1.8rem;
+  }
+  
+  .visa-process-note p {
+    font-size: 1.25rem;
+  }
+}

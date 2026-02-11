@@ -120,6 +120,7 @@ export default function Home() {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-7">
+              <div className="brand-name">Vidya Education Abroad</div>
               <h1>Your Global Journey Starts Here</h1>
               <p>
                 VE Abroad provides expert guidance for immigration,
@@ -172,7 +173,7 @@ export default function Home() {
                       type="tel"
                       className="form-control formElement"
                       name="phone"
-                      placeholder="+1 (555) 000-0000"
+                      placeholder="+91 (555) 000-0000"
                       value={formData.phone}
                       onChange={handleChange}
                       required
@@ -359,15 +360,15 @@ export default function Home() {
         <div className="container">
           <div className="stats-grid">
             <div className="stat-item">
-              <h3 className="stat-number">5000+</h3>
+              <h3 className="stat-number">1000+</h3>
               <p className="stat-label">Successful Applications</p>
             </div>
             <div className="stat-item">
-              <h3 className="stat-number">15+</h3>
+              <h3 className="stat-number">35+</h3>
               <p className="stat-label">Years Experience</p>
             </div>
             <div className="stat-item">
-              <h3 className="stat-number">25+</h3>
+              <h3 className="stat-number">50+</h3>
               <p className="stat-label">Countries Covered</p>
             </div>
             <div className="stat-item">
@@ -436,7 +437,7 @@ export default function Home() {
               <div className="feature-icon">👨‍💼</div>
               <h3>Expert Consultants</h3>
               <p>
-                ICCRC certified immigration consultants with 15+ years of
+                ICCRC certified immigration consultants with 10+ years of
                 experience
               </p>
             </div>

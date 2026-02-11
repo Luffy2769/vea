@@ -15,7 +15,7 @@ export default function Work() {
               </p>
               <div className="d-flex gap-3 mb-4">
                 <div className="stat-box">
-                  <h3 className="fw-bold mb-0">5000+</h3>
+                  <h3 className="fw-bold mb-0">500+</h3>
                   <small>Work Visas Processed</small>
                 </div>
                 <div className="stat-box">
@@ -179,7 +179,7 @@ export default function Work() {
             <div className="col-lg-6">
               <div className="bg-primary text-white p-5 rounded">
                 <h3 className="mb-4">Ready to Work Abroad?</h3>
-                <p className="mb-4">Book a free consultation with our certified work visa experts and get personalized guidance.</p>
+                <p className="mb-4 text-white">Book a free consultation with our certified work visa experts and get personalized guidance.</p>
                 <Link to="/consultationForm" className="btn btn-light btn-lg">Get Free Consultation</Link>
               </div>
             </div>

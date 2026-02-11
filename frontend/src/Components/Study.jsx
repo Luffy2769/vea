@@ -17,7 +17,7 @@ export default function Study() {
               </p>
               <div className="hero-stats">
                 <div className="stat">
-                  <span className="stat-number">2000+</span>
+                  <span className="stat-number">1000+</span>
                   <span className="stat-label">Students Placed</span>
                 </div>
                 <div className="stat">

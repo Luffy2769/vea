@@ -186,3 +186,65 @@
     font-size: 3rem;
   }
 }
+
+
+/* Liba Migration Highlight Section */
+.liba-highlight-section {
+  background: #f8f9fa;
+}
+
+.liba-highlight-box {
+  background: linear-gradient(135deg, #36948c 0%, #1d4e50 100%);
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(54, 148, 140, 0.3);
+}
+
+.liba-highlight-title {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.liba-highlight-text {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.liba-highlight-btn {
+  display: inline-block;
+  padding: 0.9rem 2.5rem;
+  background: white;
+  color: #1d4e50;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.liba-highlight-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+  color: #1d4e50;
+}
+
+@media (max-width: 991px) {
+  .liba-highlight-box {
+    padding: 2rem;
+  }
+  
+  .liba-highlight-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .liba-highlight-text {
+    font-size: 1rem;
+    text-align: center;
+  }
+}

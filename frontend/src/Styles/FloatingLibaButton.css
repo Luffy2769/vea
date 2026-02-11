@@ -1,0 +1,92 @@
+/* Floating Liba Migration Button */
+.floating-liba-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #36948c 0%, #1d4e50 100%);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  box-shadow: 0 8px 25px rgba(54, 148, 140, 0.4);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-weight: 700;
+  font-size: 1rem;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  animation: pulse-float 2s ease-in-out infinite;
+}
+
+.floating-liba-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(54, 148, 140, 0.5);
+  color: white;
+}
+
+.floating-icon {
+  font-size: 1.5rem;
+  animation: rotate 3s linear infinite;
+}
+
+.floating-text {
+  white-space: nowrap;
+}
+
+@keyframes pulse-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .floating-liba-btn {
+    bottom: 20px;
+    right: 20px;
+    padding: 0.8rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .floating-icon {
+    font-size: 1.3rem;
+  }
+
+  .floating-text {
+    display: none;
+  }
+
+  .floating-liba-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    justify-content: center;
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-liba-btn {
+    bottom: 15px;
+    right: 15px;
+    width: 55px;
+    height: 55px;
+  }
+
+  .floating-icon {
+    font-size: 1.2rem;
+  }
+}
