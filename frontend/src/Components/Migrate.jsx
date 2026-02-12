@@ -123,28 +123,28 @@ export default function Migrate() {
         <div className="container">
           <h2 className="text-center mb-5">Why Migrate Abroad?</h2>
           <div className="row g-4">
-            <div className="col-md-6 col-lg-3">
+            <div className="col-6 col-md-6 col-lg-3">
               <div className="benefit-card text-center p-4">
                 <FaBriefcase className="benefit-icon text-primary mb-3" />
                 <h5>Career Growth</h5>
                 <p className="text-muted small mb-0">Access to excellent global career opportunities</p>
               </div>
             </div>
-            <div className="col-md-6 col-lg-3">
+            <div className="col-6 col-md-6 col-lg-3">
               <div className="benefit-card text-center p-4">
                 <FaHome className="benefit-icon text-success mb-3" />
                 <h5>Better Living</h5>
                 <p className="text-muted small mb-0">Experience higher standard of living</p>
               </div>
             </div>
-            <div className="col-md-6 col-lg-3">
+            <div className="col-6 col-md-6 col-lg-3">
               <div className="benefit-card text-center p-4">
                 <FaGraduationCap className="benefit-icon text-info mb-3" />
                 <h5>Quality Education</h5>
                 <p className="text-muted small mb-0">World-class healthcare and education</p>
               </div>
             </div>
-            <div className="col-md-6 col-lg-3">
+            <div className="col-6 col-md-6 col-lg-3">
               <div className="benefit-card text-center p-4">
                 <FaGlobeAmericas className="benefit-icon text-warning mb-3" />
                 <h5>Citizenship Path</h5>
@@ -167,7 +167,7 @@ export default function Migrate() {
               { num: '5', title: 'Track & Support', desc: 'Monitor progress' },
               { num: '6', title: 'Settlement Help', desc: 'Arrival assistance' }
             ].map((step, idx) => (
-              <div key={idx} className="col-md-4 col-lg-2">
+              <div key={idx} className="col-6 col-md-4 col-lg-2">
                 <div className="process-step text-center">
                   <div className="step-number mb-3">{step.num}</div>
                   <h6 className="fw-bold">{step.title}</h6>
@@ -179,7 +179,7 @@ export default function Migrate() {
         </div>
       </section>
 
-      <section className="py-5 bg-light">
+      <section className="py-5 bg-light popular-destinations">
         <div className="container">
           <h2 className="text-center mb-5">Popular Migration Destinations</h2>
           <div className="row g-4">
@@ -189,7 +189,7 @@ export default function Migrate() {
               { flag: '🇬🇧', country: 'UK Skilled Worker', cost: 'GBP 3,200', time: '3-6 months', color: 'primary' },
               { flag: '🇩🇪', country: 'Germany Blue Card', cost: 'EUR 2,800', time: '2-4 months', color: 'info' }
             ].map((dest, idx) => (
-              <div key={idx} className="col-md-6 col-lg-3">
+              <div key={idx} className="col-6 col-md-6 col-lg-3">
                 <div className="card h-100 border-0 shadow-sm text-center">
                   <div className="card-body p-4">
                     <div className="country-flag mb-3">{dest.flag}</div>
@@ -209,7 +209,7 @@ export default function Migrate() {
         <div className="container">
           <h2 className="text-center mb-5">Why Choose VE Abroad?</h2>
           <div className="row g-4">
-            <div className="col-md-6 col-lg-3">
+            <div className="col-6 col-md-6 col-lg-3">
               <div className="text-center p-3">
                 <div className="feature-badge bg-primary text-white rounded-circle mx-auto mb-3">
                   <FaUsers />
@@ -218,7 +218,7 @@ export default function Migrate() {
                 <p className="text-muted small mb-0">Certified migration specialists</p>
               </div>
             </div>
-            <div className="col-md-6 col-lg-3">
+            <div className="col-6 col-md-6 col-lg-3">
               <div className="text-center p-3">
                 <div className="feature-badge bg-success text-white rounded-circle mx-auto mb-3">
                   <FaCheckCircle />
@@ -227,7 +227,7 @@ export default function Migrate() {
                 <p className="text-muted small mb-0">Tailored pathway strategies</p>
               </div>
             </div>
-            <div className="col-md-6 col-lg-3">
+            <div className="col-6 col-md-6 col-lg-3">
               <div className="text-center p-3">
                 <div className="feature-badge bg-info text-white rounded-circle mx-auto mb-3">
                   <FaShieldAlt />
@@ -236,7 +236,7 @@ export default function Migrate() {
                 <p className="text-muted small mb-0">Latest immigration rules</p>
               </div>
             </div>
-            <div className="col-md-6 col-lg-3">
+            <div className="col-6 col-md-6 col-lg-3">
               <div className="text-center p-3">
                 <div className="feature-badge bg-warning text-white rounded-circle mx-auto mb-3">
                   <FaAward />

@@ -116,6 +116,33 @@
   font-size: 4rem;
 }
 
+.popular-destinations .card {
+  padding: 0.75rem;
+}
+
+.popular-destinations .card-body {
+  padding: 0.75rem !important;
+}
+
+.popular-destinations .country-flag {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem !important;
+}
+
+.popular-destinations .card-title {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.popular-destinations .badge {
+  margin-bottom: 0.25rem !important;
+  font-size: 0.85rem;
+}
+
+.popular-destinations .text-muted {
+  font-size: 0.8rem;
+}
+
 .feature-badge {
   width: 70px;
   height: 70px;
@@ -123,6 +150,14 @@
   align-items: center;
   justify-content: center;
   font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .feature-badge {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
 }
 
 .cta-section {
@@ -179,11 +214,112 @@
   }
 
   .benefit-icon {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .country-flag {
-    font-size: 3rem;
+    font-size: 2rem;
+  }
+
+  .popular-destinations .card-body {
+    padding: 0.5rem !important;
+  }
+
+  .popular-destinations .country-flag {
+    font-size: 1.8rem;
+    margin-bottom: 0.25rem !important;
+  }
+
+  .popular-destinations .card-title {
+    font-size: 0.75rem !important;
+    margin-bottom: 0.25rem;
+  }
+
+  .popular-destinations .badge {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+    margin-bottom: 0.15rem !important;
+  }
+
+  .popular-destinations .text-muted {
+    font-size: 0.65rem !important;
+  }
+
+  .step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  /* Reduce text sizes on mobile */
+  h5 {
+    font-size: 0.95rem;
+  }
+
+  .card-title {
+    font-size: 0.95rem;
+  }
+
+  h6 {
+    font-size: 0.85rem;
+  }
+
+  .small, small {
+    font-size: 0.75rem;
+  }
+
+  .benefit-card {
+    padding: 0.5rem !important;
+  }
+
+  .process-step {
+    padding: 0.5rem !important;
+  }
+
+  .card-body {
+    padding: 0rem !important;
+  }
+
+  .text-center.p-3 {
+    padding: 0.5rem !important;
+  }
+
+  /* Reduce margins between elements */
+  .benefit-icon.mb-3,
+  .country-flag.mb-3,
+  .feature-badge.mb-3,
+  .step-number.mb-3 {
+    margin-bottom: 0.25rem !important;
+  }
+
+  .badge.mb-2 {
+    margin-bottom: 0.15rem !important;
+  }
+
+  /* Make text smaller and fit in one line */
+  h5 {
+    font-size: 0.8rem !important;
+    line-height: 1.1;
+  }
+
+  .card-title {
+    font-size: 0.8rem !important;
+    line-height: 1.1;
+  }
+
+  h6 {
+    font-size: 0.75rem !important;
+    line-height: 1.1;
+  }
+
+  .small, small {
+    font-size: 0.65rem !important;
+    line-height: 1.2;
+  }
+
+  p.text-muted {
+    font-size: 0.65rem !important;
+    line-height: 1.2;
   }
 }
 

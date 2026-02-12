@@ -1,0 +1,81 @@
+/* Global mobile responsive adjustments for all pages */
+
+@media (max-width: 768px) {
+  /* Icons - make smaller on mobile */
+  .benefit-icon,
+  .feature-icon,
+  .service-icon,
+  .why-icon,
+  .visit-icon,
+  .work-feature-icon,
+  .work-service-icon,
+  .visa-page-icon,
+  .home-visa-icon {
+    font-size: 2rem !important;
+  }
+
+  /* Feature badges - smaller on mobile */
+  .feature-badge {
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 1.3rem !important;
+  }
+
+  /* Country flags - smaller on mobile */
+  .country-flag,
+  .destination-flag {
+    font-size: 2.5rem !important;
+  }
+
+  /* Step numbers - smaller on mobile */
+  .step-number,
+  .process-number,
+  .timeline-number,
+  .visa-timeline-badge {
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 1.2rem !important;
+  }
+
+  /* Headings - adjust size */
+  h1 {
+    font-size: 1.8rem !important;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  h3 {
+    font-size: 1.2rem !important;
+  }
+
+  /* Display headings */
+  .display-3 {
+    font-size: 2rem !important;
+  }
+
+  .display-4 {
+    font-size: 1.8rem !important;
+  }
+
+  .display-5 {
+    font-size: 1.6rem !important;
+  }
+
+  /* Lead text */
+  .lead {
+    font-size: 1rem !important;
+  }
+
+  /* Padding adjustments */
+  .py-5 {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  /* Card padding */
+  .card-body {
+    padding: 1.5rem !important;
+  }
+}
