@@ -3,16 +3,18 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FaGlobeAmericas, FaBriefcase, FaHome, FaGraduationCap, FaCheckCircle, FaUsers, FaShieldAlt, FaClock, FaAward } from 'react-icons/fa';
 import { Helmet } from "react-helmet";
+import Toast from './Toast';
+import CountryComparison from './CountryComparison';
 export default function Migrate() {
   const [formData, setFormData] = useState({
     country: "",
     email: "",
     phone: "",
   });
+  const [toast, setToast] = useState(null);
 
   const quickForm = async (e) => {
     e.preventDefault();
-    // Handle form submission
     try {
       const response = await fetch("http://localhost:8000/api/quickForm/", {
         method: "POST",
@@ -23,15 +25,17 @@ export default function Migrate() {
       });
       const result = await response.json();
       if (result.status === "success") {
-        alert("Form submitted successfully!");
+        setToast({ message: 'Form submitted successfully!', type: 'success' });
         setFormData({
           country: "",
           email: "",
           phone: "",
         });
+        setTimeout(() => setToast(null), 3000);
       }
     } catch (error) {
-      alert("Error submitting form");
+      setToast({ message: 'Error submitting form. Please try again.', type: 'error' });
+      setTimeout(() => setToast(null), 3000);
     }
   };
 
@@ -43,12 +47,26 @@ export default function Migrate() {
   };
   return (
     <div className="migrate-page">
+      {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}
       <Helmet>
         <title>Canada PR & Immigration Services | Permanent Residency Consultants</title>
-        <meta
-          name="description"
-          content="Expert Canada PR, Australia PR & global immigration services. Personalized migration pathways, Express Entry, PNP, work permits. 98% success rate. Partner with Liba Migration Services."
-        />
+        <meta name="description" content="Expert Canada PR, Australia PR & global immigration services. Personalized migration pathways, Express Entry, PNP, work permits. 98% success rate. Partner with Liba Migration Services." />
+        <link rel="canonical" href="https://veabroad.com/migrate" />
+        <meta property="og:title" content="Canada PR & Immigration Services | Permanent Residency Consultants" />
+        <meta property="og:description" content="Expert Canada PR, Australia PR & global immigration services. 98% success rate." />
+        <meta property="og:url" content="https://veabroad.com/migrate" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Immigration Consulting",
+            "provider": {"@type": "Organization", "name": "VE-Scholars"},
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock"
+            }
+          })}
+        </script>
       </Helmet>
       <section className="migrate-hero">
         <div className="container">
@@ -228,6 +246,13 @@ export default function Migrate() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Country Comparison Tool */}
+      <section className="py-5 bg-light">
+        <div className="container">
+          <CountryComparison />
         </div>
       </section>
 

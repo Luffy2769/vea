@@ -20,10 +20,20 @@ export default function About() {
     <div className="about-page">
       <Helmet>
         <title>About VE-Scholars | 10+ Years Education & Migration Expertise</title>
-        <meta
-          name="description"
-          content="VE-Scholars: 10+ years in international migration, 35+ years academic coaching. 500+ successful students & PR approvals. Expert guidance for Canada PR, study abroad & global opportunities."
-        />
+        <meta name="description" content="VE-Scholars: 10+ years in international migration, 35+ years academic coaching. 500+ successful students & PR approvals. Expert guidance for Canada PR, study abroad & global opportunities." />
+        <link rel="canonical" href="https://veabroad.com/about" />
+        <meta property="og:title" content="About VE-Scholars | 10+ Years Education & Migration Expertise" />
+        <meta property="og:description" content="VE-Scholars: 10+ years in international migration, 35+ years academic coaching. 500+ successful students & PR approvals." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://veabroad.com/about" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "name": "About VE-Scholars",
+            "description": "VE-Scholars is a trusted education and migration consultancy with over a decade of expertise."
+          })}
+        </script>
       </Helmet>
       {/* Hero Section */}
       <section className="about-hero">
@@ -76,6 +86,7 @@ export default function About() {
                   src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&h=450&fit=crop"
                   alt="VE Abroad Team"
                   className="img-fluid rounded-3 shadow-lg"
+                  loading="lazy"
                 />
               </div>
               <div className="hero-highlights pt-3">

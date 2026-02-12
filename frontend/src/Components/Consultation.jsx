@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaUser, FaEnvelope, FaPhone, FaClipboardList, FaComments, FaCheckCircle, FaRocket } from 'react-icons/fa';
 import "../Styles/Consultation.css";
 import { Helmet } from 'react-helmet';
+import Toast from './Toast';
 
 export default function Consultation() {
 
@@ -13,10 +14,10 @@ export default function Consultation() {
     description: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [toast, setToast] = useState(null);
 
   const consultationForm = async (e) => {
     e.preventDefault();
-    // Handle form submission
     try {
       const response = await fetch("http://localhost:8000/api/consultationForm/", {
         method: "POST",
@@ -28,6 +29,7 @@ export default function Consultation() {
       const result = await response.json();
       if (result.status === "success") {
         setIsSubmitted(true);
+        setToast({ message: 'Consultation request submitted successfully!', type: 'success' });
         setTimeout(() => {
           setFormData({
             name: "",
@@ -37,10 +39,12 @@ export default function Consultation() {
             description: "",
           });
           setIsSubmitted(false);
+          setToast(null);
         }, 3000);
       }
     } catch (error) {
-      alert("Error submitting form");
+      setToast({ message: 'Error submitting form. Please try again.', type: 'error' });
+      setTimeout(() => setToast(null), 3000);
     }
   };
 
@@ -53,12 +57,14 @@ export default function Consultation() {
 
   return (
     <div className="consultation-page">
+      {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}
       <Helmet>
         <title>Free Consultation | Book Expert Immigration & Study Abroad Guidance</title>
-        <meta
-          name="description"
-          content="Book free consultation with certified advisors. Get personalized guidance for study abroad, immigration, work permits & visa services. 24-hour response time. No hidden charges."
-        />
+        <meta name="description" content="Book free consultation with certified advisors. Get personalized guidance for study abroad, immigration, work permits & visa services. 24-hour response time. No hidden charges." />
+        <link rel="canonical" href="https://veabroad.com/consultationForm" />
+        <meta property="og:title" content="Free Consultation | Expert Immigration & Study Abroad Guidance" />
+        <meta property="og:description" content="Book free consultation with certified advisors. 24-hour response time. No hidden charges." />
+        <meta property="og:url" content="https://veabroad.com/consultationForm" />
       </Helmet>
       <div className="consultation-container">
         <div className="consultation-content">

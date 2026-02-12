@@ -9,10 +9,11 @@ export default function Coaching() {
     <div className="coaching-page">
       <Helmet>
         <title>IELTS Coaching & English Language Training | 95% Success Rate</title>
-        <meta
-          name="description"
-          content="Expert IELTS, TOEFL, PTE coaching with 95% success rate. 500+ students trained. Average band score 8.5. One-on-one & group classes. Mock tests, speaking practice & exam strategies."
-        />
+        <meta name="description" content="Expert IELTS, TOEFL, PTE coaching with 95% success rate. 500+ students trained. Average band score 8.5. One-on-one & group classes. Mock tests, speaking practice & exam strategies." />
+        <link rel="canonical" href="https://veabroad.com/coaching" />
+        <meta property="og:title" content="IELTS Coaching & English Language Training" />
+        <meta property="og:description" content="Expert IELTS, TOEFL, PTE coaching with 95% success rate. 500+ students trained. Average band score 8.5." />
+        <meta property="og:url" content="https://veabroad.com/coaching" />
       </Helmet>
       {/* HERO */}
       <section className="coaching-hero">

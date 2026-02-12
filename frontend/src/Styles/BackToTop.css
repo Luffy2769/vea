@@ -1,0 +1,58 @@
+.back-to-top-btn {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #1d4e50 0%, #36948c 100%);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(29, 78, 80, 0.4);
+  z-index: 998;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.3s ease;
+}
+
+.back-to-top-btn:hover {
+  transform: translateX(-50%) translateY(-5px);
+  box-shadow: 0 6px 20px rgba(29, 78, 80, 0.6);
+}
+
+.back-to-top-btn svg {
+  font-size: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .back-to-top-btn {
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45px;
+    height: 45px;
+  }
+
+  .back-to-top-btn:hover {
+    transform: translateX(-50%) translateY(-5px);
+  }
+
+  .back-to-top-btn svg {
+    font-size: 18px;
+  }
+}

@@ -9,10 +9,11 @@ export default function LibaMigration() {
     <div className="liba-page">
       <Helmet>
         <title>Liba Migration Services | Canada PR, Work Permits & Immigration Experts</title>
-        <meta
-          name="description"
-          content="Liba Migration Services - Sister concern of VE-Scholars. 8+ years expertise in Canada PR, work permits, family sponsorship & global immigration. 500+ families settled. 98% success rate."
-        />
+        <meta name="description" content="Liba Migration Services - Sister concern of VE-Scholars. 8+ years expertise in Canada PR, work permits, family sponsorship & global immigration. 500+ families settled. 98% success rate." />
+        <link rel="canonical" href="https://veabroad.com/LibaMigration" />
+        <meta property="og:title" content="Liba Migration Services | Canada PR & Immigration Experts" />
+        <meta property="og:description" content="8+ years expertise in Canada PR, work permits, family sponsorship. 500+ families settled. 98% success rate." />
+        <meta property="og:url" content="https://veabroad.com/LibaMigration" />
       </Helmet>
       {/* Hero Section */}
       <section className="liba-hero">
@@ -73,7 +74,7 @@ export default function LibaMigration() {
               </div>
             </div>
             <div className="col-lg-6">
-              <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1200&h=800&fit=crop" alt="Liba Migration" className="img-fluid rounded-3 shadow-lg" />
+              <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1200&h=800&fit=crop" alt="Liba Migration" className="img-fluid rounded-3 shadow-lg" loading="lazy" />
             </div>
           </div>
         </div>

@@ -9,10 +9,11 @@ export default function Visit() {
     <div className="visit-page">
       <Helmet>
         <title>Tourist & Visit Visa Services | USA, Canada, UK, Schengen Visa</title>
-        <meta
-          name="description"
-          content="Tourist, business & family visit visa services for 50+ countries. 95% success rate. Fast processing for USA B1/B2, Canada TRV, UK visitor visa, Schengen visa. 1000+ happy travelers."
-        />
+        <meta name="description" content="Tourist, business & family visit visa services for 50+ countries. 95% success rate. Fast processing for USA B1/B2, Canada TRV, UK visitor visa, Schengen visa. 1000+ happy travelers." />
+        <link rel="canonical" href="https://veabroad.com/visit" />
+        <meta property="og:title" content="Tourist & Visit Visa Services | 50+ Countries" />
+        <meta property="og:description" content="Tourist, business & family visit visa services. 95% success rate. 1000+ happy travelers." />
+        <meta property="og:url" content="https://veabroad.com/visit" />
       </Helmet>
       {/* Hero Section */}
       <section className="visit-hero">
@@ -45,7 +46,7 @@ export default function Visit() {
             </div>
             <div className="col-lg-6">
               <div className="visit-hero-image">
-                <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200&h=450&fit=crop" alt="Travel Destinations" className="img-fluid rounded-3 shadow-lg" />
+                <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200&h=450&fit=crop" alt="Travel Destinations" className="img-fluid rounded-3 shadow-lg" loading="lazy" />
               </div>
             </div>
           </div>

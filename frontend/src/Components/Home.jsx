@@ -15,6 +15,7 @@ import {
 import "../Styles/Home.css";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import Toast from "./Toast";
 
 export default function Home() {
 
@@ -25,6 +26,7 @@ export default function Home() {
     service: ''
   });
   const [showPopup, setShowPopup] = useState(false);
+  const [toast, setToast] = useState(null);
 
   useEffect(() => {
     const isMobile = window.innerWidth < 992;
@@ -48,11 +50,13 @@ export default function Home() {
       });
       const result = await response.json();
       if (result.status === 'success') {
-        alert('Form submitted successfully!');
+        setToast({ message: 'Form submitted successfully!', type: 'success' });
         setFormData({ name: '', email: '', phone: '', service: '' });
+        setTimeout(() => setToast(null), 3000);
       }
     } catch (error) {
-      alert('Error submitting form');
+      setToast({ message: 'Error submitting form. Please try again.', type: 'error' });
+      setTimeout(() => setToast(null), 3000);
     }
   };
 
@@ -64,12 +68,45 @@ export default function Home() {
   };
   return (
     <>
+    {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}
     <Helmet>
         <title>Study Abroad Consultancy in India | Canada PR & Study Visa – Vidya Education</title>
-        <meta
-          name="description"
-          content="Expert guidance for Canada PR and study visa from India. Vidya Education Abroad helps students achieve global education goals."
-        />
+        <meta name="description" content="Expert guidance for Canada PR and study visa from India. Vidya Education Abroad helps students achieve global education goals." />
+        <link rel="canonical" href="https://veabroad.com/" />
+        <meta property="og:title" content="Study Abroad Consultancy in India | Canada PR & Study Visa – Vidya Education" />
+        <meta property="og:description" content="Expert guidance for Canada PR and study visa from India. Vidya Education Abroad helps students achieve global education goals." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://veabroad.com/" />
+        <meta property="og:image" content="https://veabroad.com/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Study Abroad Consultancy in India | Canada PR & Study Visa" />
+        <meta name="twitter:description" content="Expert guidance for Canada PR and study visa from India. Vidya Education Abroad helps students achieve global education goals." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "EducationalOrganization",
+            "name": "Vidya Education Abroad",
+            "alternateName": "VE-Scholars",
+            "url": "https://veabroad.com",
+            "logo": "https://veabroad.com/logo.png",
+            "description": "Expert guidance for Canada PR and study visa from India. 10+ years of international migration expertise.",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Mumbai",
+              "addressRegion": "Maharashtra",
+              "addressCountry": "IN"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "500"
+            },
+            "offers": {
+              "@type": "Offer",
+              "category": "Education Consulting"
+            }
+          })}
+        </script>
       </Helmet>
       {/* Mobile Form Popup */}
       <div className={`form-popup-overlay ${showPopup ? 'active' : ''}`} onClick={() => setShowPopup(false)}>
@@ -140,6 +177,7 @@ export default function Home() {
                   src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=w1000&q=80"
                   alt="Global Migration Services"
                   className="home-hero-image img-fluid rounded shadow showOnPhone"
+                  loading="lazy"
                 />
               </div>
               <button className="primary-btn lmbtn pulse-animation">

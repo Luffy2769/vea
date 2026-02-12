@@ -8,10 +8,11 @@ export default function Visa() {
     <div className="visa-page">
       <Helmet>
         <title>Visa Services | Study, Work, Tourist, PR & Business Visa Consultants</title>
-        <meta
-          name="description"
-          content="Complete visa services for study, work, tourist, PR & business visas. 95%+ approval rate. Expert documentation, interview prep & fast processing. Certified immigration consultants."
-        />
+        <meta name="description" content="Complete visa services for study, work, tourist, PR & business visas. 95%+ approval rate. Expert documentation, interview prep & fast processing. Certified immigration consultants." />
+        <link rel="canonical" href="https://veabroad.com/visa" />
+        <meta property="og:title" content="Visa Services | All Types of Visa Assistance" />
+        <meta property="og:description" content="Complete visa services for study, work, tourist, PR & business visas. 95%+ approval rate." />
+        <meta property="og:url" content="https://veabroad.com/visa" />
       </Helmet>
       <section className="visa-hero">
         <div className="container">

@@ -8,10 +8,11 @@ export default function Work() {
     <div className="work-page">
       <Helmet>
         <title>Work Abroad Visa Services | Canada, Australia, UK, USA Work Permits</title>
-        <meta
-          name="description"
-          content="Work visa assistance for Canada LMIA, Australia TSS 482, UK Skilled Worker, USA H1B. 92% success rate. Job search support, documentation & PR pathways. 500+ work visas processed."
-        />
+        <meta name="description" content="Work visa assistance for Canada LMIA, Australia TSS 482, UK Skilled Worker, USA H1B. 92% success rate. Job search support, documentation & PR pathways. 500+ work visas processed." />
+        <link rel="canonical" href="https://veabroad.com/work" />
+        <meta property="og:title" content="Work Abroad Visa Services | International Work Permits" />
+        <meta property="og:description" content="Work visa assistance for Canada, Australia, UK, USA. 92% success rate. 500+ work visas processed." />
+        <meta property="og:url" content="https://veabroad.com/work" />
       </Helmet>
       <section className="work-hero">
         <div className="container">
@@ -35,7 +36,7 @@ export default function Work() {
             </div>
             <div className="col-lg-6">
               <div className="work-hero-image">
-                <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1200&h=450&fit=crop" alt="Work Abroad" className="img-fluid rounded-3 shadow-lg" />
+                <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1200&h=450&fit=crop" alt="Work Abroad" className="img-fluid rounded-3 shadow-lg" loading="lazy" />
               </div>
             </div>
           </div>

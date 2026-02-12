@@ -7,10 +7,32 @@ export default function Study() {
     <div className="study-page">
       <Helmet>
         <title>Study Abroad Consultants | Top Universities in Canada, UK, USA, Australia</title>
-        <meta
-          name="description"
-          content="Expert study abroad guidance for 500+ partner universities. 95% visa success rate. Complete support from university selection to visa approval. Study in Canada, UK, USA, Australia & more."
-        />
+        <meta name="description" content="Expert study abroad guidance for 500+ partner universities. 95% visa success rate. Complete support from university selection to visa approval. Study in Canada, UK, USA, Australia & more." />
+        <link rel="canonical" href="https://veabroad.com/study" />
+        <meta property="og:title" content="Study Abroad Consultants | Top Universities Worldwide" />
+        <meta property="og:description" content="Expert study abroad guidance for 500+ partner universities. 95% visa success rate." />
+        <meta property="og:url" content="https://veabroad.com/study" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Study Abroad Consulting",
+            "provider": {
+              "@type": "EducationalOrganization",
+              "name": "Vidya Education Abroad"
+            },
+            "areaServed": "IN",
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Study Abroad Services",
+              "itemListElement": [
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "University Selection"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Application Assistance"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Student Visa Support"}}
+              ]
+            }
+          })}
+        </script>
       </Helmet>
 
       {/* HERO */}

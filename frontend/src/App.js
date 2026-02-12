@@ -15,6 +15,8 @@ import "./App.css";
 import Consultation from "./Components/Consultation.jsx";
 import LibaMigration from "./Components/LibaMigration.jsx";
 import FloatingLibaButton from "./Components/FloatingLibaButton.jsx";
+import BackToTop from "./Components/BackToTop.jsx";
+// import FloatingWhatsApp from "./Components/FloatingWhatsApp.jsx";
 
 // Fonts
 <style>
@@ -38,6 +40,8 @@ function App() {
       <div className="App">
         <ScrollToTop />
         <FloatingLibaButton />
+        <BackToTop />
+        {/* <FloatingWhatsApp /> */}
         <header className="App-header sticky-top">
           <Header />
           <Navbar />
