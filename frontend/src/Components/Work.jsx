@@ -223,7 +223,7 @@ export default function Work() {
                 <p className="text-muted">Connect with employers, job portals, and recruitment agencies in your target country.</p>
               </div>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-4 d-md-none">
               <div className="service-box p-4 bg-white rounded shadow-sm h-100">
                 <MdCheckCircle className="work-service-icon text-primary mb-3" />
                 <h5>Visa Processing</h5>
