@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
+// import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
 import '../Styles/CountryComparison.css';
 
 const countryData = {

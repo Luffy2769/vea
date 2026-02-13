@@ -33,18 +33,18 @@ export default function Footer() {
               guidance and personalized support.
             </p>
             <div className="social-links">
-              <a href="https://www.facebook.com/libamigration?mibextid=wwXIfr&mibextid=wwXIfr" className="social-link">
+              <Link to="https://www.facebook.com/libamigration?mibextid=wwXIfr&mibextid=wwXIfr" className="social-link" target="_blank" rel="noopener noreferrer">
                 <FaFacebook />
-              </a>
-              <a href="#" className="social-link">
+              </Link>
+              <Link to="/" className="social-link">
                 <FaTwitter />
-              </a>
-              <a href="#" className="social-link">
+              </Link>
+              <Link to="/" className="social-link">
                 <FaLinkedin />
-              </a>
-              <a href="https://www.instagram.com/liba_migration?igsh=eDRkdXR3NWozZTdr" className="social-link">
+              </Link>
+              <Link to="https://www.instagram.com/liba_migration?igsh=eDRkdXR3NWozZTdr" className="social-link" target="_blank" rel="noopener noreferrer">
                 <FaInstagram />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -75,22 +75,22 @@ export default function Footer() {
             <h4>Popular Destinations</h4>
             <ul className="footer-links">
               <li>
-                <a href="#">Canada</a>
+                <Link to="/study">Canada</Link>
               </li>
               <li>
-                <a href="#">Australia</a>
+                <Link to="/study">Australia</Link>
               </li>
               <li>
-                <a href="#">United Kingdom</a>
+                <Link to="/study">United Kingdom</Link>
               </li>
               <li>
-                <a href="#">United States</a>
+                <Link to="/study">United States</Link>
               </li>
               <li>
-                <a href="#">Germany</a>
+                <Link to="/study">Germany</Link>
               </li>
               <li>
-                <a href="#">New Zealand</a>
+                <Link to="/study">New Zealand</Link>
               </li>
             </ul>
           </div>
@@ -135,9 +135,9 @@ export default function Footer() {
           <div className="footer-bottom-content">
             <p>&copy; 2026 Vidya Education Abroad. All rights reserved.</p>
             <div className="footer-bottom-links">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
-              <a href="#">Cookie Policy</a>
+              <Link to="/privacy">Privacy Policy</Link>
+              <Link to="/terms">Terms of Service</Link>
+              <Link to="/cookies">Cookie Policy</Link>
             </div>
           </div>
         </div>

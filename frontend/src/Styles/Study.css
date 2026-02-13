@@ -276,7 +276,7 @@
 /* COUNTRIES SECTION */
 .study-page .countries-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-top: 30px;
 }
@@ -754,5 +754,160 @@
   }
   50% {
     transform: translateY(-10px);
+  }
+}
+
+/* FLIP CARD STYLES */
+.study-page .flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 320px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.study-page .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1.5s;
+  transform-style: preserve-3d;
+}
+
+.study-page .flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.study-page .flip-card-front,
+.study-page .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.study-page .flip-card-front {
+  background: white;
+}
+
+.study-page .flip-card-front .country-flag {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.study-page .flip-card-front h3 {
+  color: #1d4e50;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.study-page .flip-card-back {
+  background: linear-gradient(135deg, #1d4e50 0%, #36948c 100%);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.study-page .flip-card-back h5 {
+  color: white;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.study-page .flip-card-back p {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.study-page .flip-card-back .country-info p {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.study-page .flip-card-back .country-info strong {
+  color: white;
+}
+
+.study-page .flip-card-back .feature-tag {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.study-page .flip-card-back ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.study-page .flip-card-back ul li {
+  color: white;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+
+.study-page .flip-card-back ul li svg {
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .study-page .flip-card {
+    height: 180px;
+  }
+
+  .study-page .flip-card-front .country-flag {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .study-page .flip-card-front h3 {
+    font-size: 0.95rem;
+  }
+
+  .study-page .flip-card-back {
+    padding: 0.5rem;
+  }
+
+  .study-page .flip-card-back h5 {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    color: white;
+  }
+
+  .study-page .flip-card-back p {
+    font-size: 0.7rem;
+    margin-bottom: 10px;
+    color: white;
+  }
+
+  .study-page .flip-card-back .country-info p {
+    font-size: 0.65rem;
+    margin-bottom: 5px;
+    color: white;
+  }
+
+  .study-page .flip-card-back .country-info strong {
+    color: white;
+  }
+
+  .study-page .flip-card-back .feature-tag {
+    font-size: 0.6rem;
+    padding: 4px 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
   }
 }

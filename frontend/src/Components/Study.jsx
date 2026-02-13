@@ -1,8 +1,47 @@
 import "../Styles/Study.css";
 import { FaGraduationCap, FaGlobe, FaBriefcase, FaUsers, FaBookOpen, FaFileAlt, FaHandshake, FaPlane } from 'react-icons/fa';
+import { MdCheckCircle } from 'react-icons/md';
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { useState, useEffect, useRef } from "react";
 export default function Study() {
+  const [flippedCard, setFlippedCard] = useState(null);
+  const cardRefs = useRef([]);
+
+  useEffect(() => {
+    const observers = cardRefs.current.map((cardRef, index) => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setFlippedCard(index);
+              setTimeout(() => setFlippedCard(null), 5000);
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+
+      if (cardRef) {
+        observer.observe(cardRef);
+      }
+
+      return observer;
+    });
+
+    return () => {
+      observers.forEach((observer, index) => {
+        if (cardRefs.current[index]) {
+          observer.unobserve(cardRefs.current[index]);
+        }
+      });
+    };
+  }, []);
+
+  const handleCardClick = (index) => {
+    setFlippedCard(flippedCard === index ? null : index);
+  };
+
   return (
     <div className="study-page">
       <Helmet>
@@ -191,93 +230,135 @@ export default function Study() {
         <div className="container">
           <h2>Top Study Destinations</h2>
           <div className="countries-grid">
-            <div className="country-card">
-              <div className="country-flag">🇨🇦</div>
-              <h3>Canada</h3>
-              <div className="country-info">
-                <p><strong>Popular Programs:</strong> Engineering, Business, Computer Science</p>
-                <p><strong>Work Permit:</strong> 3 years post-graduation</p>
-                <p><strong>Tuition Range:</strong> $15,000 - $35,000 CAD</p>
-              </div>
-              <div className="country-features">
-                <span className="feature-tag">High Quality Education</span>
-                <span className="feature-tag">Multicultural</span>
-                <span className="feature-tag">PR Pathway</span>
-              </div>
-            </div>
-
-            <div className="country-card">
-              <div className="country-flag">🇦🇺</div>
-              <h3>Australia</h3>
-              <div className="country-info">
-                <p><strong>Popular Programs:</strong> Medicine, Engineering, MBA</p>
-                <p><strong>Work Permit:</strong> 2-4 years post-graduation</p>
-                <p><strong>Tuition Range:</strong> $20,000 - $45,000 AUD</p>
-              </div>
-              <div className="country-features">
-                <span className="feature-tag">Research Excellence</span>
-                <span className="feature-tag">Great Climate</span>
-                <span className="feature-tag">Work Opportunities</span>
+            <div ref={el => cardRefs.current[0] = el} className={`flip-card ${flippedCard === 0 ? 'flipped' : ''}`} onClick={() => handleCardClick(0)}>
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <div className="country-flag">🇨🇦</div>
+                  <h3>Canada</h3>
+                </div>
+                <div className="flip-card-back">
+                  <h5>Canada</h5>
+                  <div className="country-info">
+                    <p><strong>Popular Programs:</strong> Engineering, Business, Computer Science</p>
+                    <p><strong>Work Permit:</strong> 3 years post-graduation</p>
+                    <p><strong>Tuition Range:</strong> $15,000 - $35,000 CAD</p>
+                  </div>
+                  <div className="country-features">
+                    <span className="feature-tag">High Quality Education</span>
+                    <span className="feature-tag">Multicultural</span>
+                    <span className="feature-tag">PR Pathway</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="country-card">
-              <div className="country-flag">🇬🇧</div>
-              <h3>United Kingdom</h3>
-              <div className="country-info">
-                <p><strong>Popular Programs:</strong> Finance, Law, Medicine</p>
-                <p><strong>Work Permit:</strong> 2 years post-graduation</p>
-                <p><strong>Tuition Range:</strong> £15,000 - £40,000</p>
-              </div>
-              <div className="country-features">
-                <span className="feature-tag">Historic Universities</span>
-                <span className="feature-tag">1-Year Masters</span>
-                <span className="feature-tag">Global Recognition</span>
-              </div>
-            </div>
-
-            <div className="country-card">
-              <div className="country-flag">🇺🇸</div>
-              <h3>United States</h3>
-              <div className="country-info">
-                <p><strong>Popular Programs:</strong> STEM, Business, Liberal Arts</p>
-                <p><strong>Work Permit:</strong> 1-3 years (OPT/STEM)</p>
-                <p><strong>Tuition Range:</strong> $25,000 - $60,000 USD</p>
-              </div>
-              <div className="country-features">
-                <span className="feature-tag">Top Rankings</span>
-                <span className="feature-tag">Innovation Hub</span>
-                <span className="feature-tag">Diverse Programs</span>
+            <div ref={el => cardRefs.current[1] = el} className={`flip-card ${flippedCard === 1 ? 'flipped' : ''}`} onClick={() => handleCardClick(1)}>
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <div className="country-flag">🇦🇺</div>
+                  <h3>Australia</h3>
+                </div>
+                <div className="flip-card-back">
+                  <h5>Australia</h5>
+                  <div className="country-info">
+                    <p><strong>Popular Programs:</strong> Medicine, Engineering, MBA</p>
+                    <p><strong>Work Permit:</strong> 2-4 years post-graduation</p>
+                    <p><strong>Tuition Range:</strong> $20,000 - $45,000 AUD</p>
+                  </div>
+                  <div className="country-features">
+                    <span className="feature-tag">Research Excellence</span>
+                    <span className="feature-tag">Great Climate</span>
+                    <span className="feature-tag">Work Opportunities</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="country-card">
-              <div className="country-flag">🇩🇪</div>
-              <h3>Germany</h3>
-              <div className="country-info">
-                <p><strong>Popular Programs:</strong> Engineering, Technology, Research</p>
-                <p><strong>Work Permit:</strong> 18 months job search</p>
-                <p><strong>Tuition Range:</strong> €0 - €20,000 (Public Unis)</p>
-              </div>
-              <div className="country-features">
-                <span className="feature-tag">Low/No Tuition</span>
-                <span className="feature-tag">Strong Economy</span>
-                <span className="feature-tag">Research Focus</span>
+            <div ref={el => cardRefs.current[2] = el} className={`flip-card ${flippedCard === 2 ? 'flipped' : ''}`} onClick={() => handleCardClick(2)}>
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <div className="country-flag">🇬🇧</div>
+                  <h3>United Kingdom</h3>
+                </div>
+                <div className="flip-card-back">
+                  <h5>United Kingdom</h5>
+                  <div className="country-info">
+                    <p><strong>Popular Programs:</strong> Finance, Law, Medicine</p>
+                    <p><strong>Work Permit:</strong> 2 years post-graduation</p>
+                    <p><strong>Tuition Range:</strong> £15,000 - £40,000</p>
+                  </div>
+                  <div className="country-features">
+                    <span className="feature-tag">Historic Universities</span>
+                    <span className="feature-tag">1-Year Masters</span>
+                    <span className="feature-tag">Global Recognition</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="country-card">
-              <div className="country-flag">🇳🇿</div>
-              <h3>New Zealand</h3>
-              <div className="country-info">
-                <p><strong>Popular Programs:</strong> Agriculture, Tourism, IT</p>
-                <p><strong>Work Permit:</strong> 3 years post-graduation</p>
-                <p><strong>Tuition Range:</strong> $22,000 - $35,000 NZD</p>
+            <div ref={el => cardRefs.current[3] = el} className={`flip-card ${flippedCard === 3 ? 'flipped' : ''}`} onClick={() => handleCardClick(3)}>
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <div className="country-flag">🇺🇸</div>
+                  <h3>United States</h3>
+                </div>
+                <div className="flip-card-back">
+                  <h5>United States</h5>
+                  <div className="country-info">
+                    <p><strong>Popular Programs:</strong> STEM, Business, Liberal Arts</p>
+                    <p><strong>Work Permit:</strong> 1-3 years (OPT/STEM)</p>
+                    <p><strong>Tuition Range:</strong> $25,000 - $60,000 USD</p>
+                  </div>
+                  <div className="country-features">
+                    <span className="feature-tag">Top Rankings</span>
+                    <span className="feature-tag">Innovation Hub</span>
+                    <span className="feature-tag">Diverse Programs</span>
+                  </div>
+                </div>
               </div>
-              <div className="country-features">
-                <span className="feature-tag">Safe Environment</span>
-                <span className="feature-tag">Natural Beauty</span>
-                <span className="feature-tag">Work-Life Balance</span>
+            </div>
+
+            <div ref={el => cardRefs.current[4] = el} className={`flip-card ${flippedCard === 4 ? 'flipped' : ''}`} onClick={() => handleCardClick(4)}>
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <div className="country-flag">🇩🇪</div>
+                  <h3>Germany</h3>
+                </div>
+                <div className="flip-card-back">
+                  <h5>Germany</h5>
+                  <div className="country-info">
+                    <p><strong>Popular Programs:</strong> Engineering, Technology, Research</p>
+                    <p><strong>Work Permit:</strong> 18 months job search</p>
+                    <p><strong>Tuition Range:</strong> €0 - €20,000 (Public Unis)</p>
+                  </div>
+                  <div className="country-features">
+                    <span className="feature-tag">Low/No Tuition</span>
+                    <span className="feature-tag">Strong Economy</span>
+                    <span className="feature-tag">Research Focus</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div ref={el => cardRefs.current[5] = el} className={`flip-card ${flippedCard === 5 ? 'flipped' : ''}`} onClick={() => handleCardClick(5)}>
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <div className="country-flag">🇳🇿</div>
+                  <h3>New Zealand</h3>
+                </div>
+                <div className="flip-card-back">
+                  <h5>New Zealand</h5>
+                  <div className="country-info">
+                    <p><strong>Popular Programs:</strong> Agriculture, Tourism, IT</p>
+                    <p><strong>Work Permit:</strong> 3 years post-graduation</p>
+                    <p><strong>Tuition Range:</strong> $22,000 - $35,000 NZD</p>
+                  </div>
+                  <div className="country-features">
+                    <span className="feature-tag">Safe Environment</span>
+                    <span className="feature-tag">Natural Beauty</span>
+                    <span className="feature-tag">Work-Life Balance</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

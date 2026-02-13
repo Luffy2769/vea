@@ -252,7 +252,7 @@ textarea:hover {
   }
 
   .section {
-    padding: 60px 0;
+    padding: 40px 0 !important;
   }
 
   .container {
@@ -270,7 +270,7 @@ textarea:hover {
   }
 
   .section {
-    padding: 40px 0;
+    padding: 40px 0 !important;
   }
 }
 
