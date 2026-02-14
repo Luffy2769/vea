@@ -109,8 +109,8 @@ export default function Home() {
         </script>
       </Helmet>
       {/* Mobile Form Popup */}
-      <div className={`form-popup-overlay ${showPopup ? 'active' : ''}`} onClick={() => setShowPopup(false)}>
-        <div className="form-popup-content" onClick={(e) => e.stopPropagation()}>
+      <div className={`form-popup-overlay ${showPopup ? 'active' : ''}`} onClick={() => setShowPopup(false)} style={{ display: showPopup ? 'flex' : 'none' }}>
+        <div className="form-popup-content" onClick={(e) => e.stopPropagation()} style={{ animation: 'popIn 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55)' }}>
           <button className="form-popup-close" onClick={() => setShowPopup(false)}>&times;</button>
           <h3 className="mb-3">Quick Inquiry</h3>
           <form onSubmit={handleSubmit}>
@@ -480,28 +480,28 @@ export default function Home() {
         <div className="container">
           <h2>Why Choose VE Abroad?</h2>
           <div className="why-choose-grid">
-            <div className="feature-card">
-              <div className="feature-icon">👨‍💼</div>
+            <div className="home-feature-card">
+              <div className="home-feature-icon">👨‍💼</div>
               <h3>Expert Consultants</h3>
               <p>
                 ICCRC certified immigration consultants with 10+ years of
                 experience
               </p>
             </div>
-            <div className="feature-card">
-              <div className="feature-icon">🎯</div>
+            <div className="home-feature-card">
+              <div className="home-feature-icon">🎯</div>
               <h3>Personalized Approach</h3>
               <p>Tailored strategies based on your unique profile and goals</p>
             </div>
-            <div className="feature-card">
-              <div className="feature-icon">📋</div>
+            <div className="home-feature-card">
+              <div className="home-feature-icon">📋</div>
               <h3>Transparent Process</h3>
               <p>
                 Clear communication and regular updates throughout your journey
               </p>
             </div>
-            <div className="feature-card">
-              <div className="feature-icon">🤝</div>
+            <div className="home-feature-card">
+              <div className="home-feature-icon">🤝</div>
               <h3>End-to-End Support</h3>
               <p>From initial consultation to post-landing services</p>
             </div>

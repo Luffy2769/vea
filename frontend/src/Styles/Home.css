@@ -21,6 +21,7 @@ body {
 }
 
 /* CONTAINER */
+
 .container {
   width: 90%;
   max-width: 1200px;
@@ -28,6 +29,7 @@ body {
 }
 
 /* HERO */
+
 .hero {
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   padding: 80px 0;
@@ -91,6 +93,7 @@ body {
 }
 
 /* Hero Image Styling */
+
 .home-hero-image-container {
   margin-bottom: 20px;
 }
@@ -268,7 +271,6 @@ body {
 
 /* BUTTON */
 
-
 /* .primary-btn {
   background: #ff6b00;
   color: #fff;
@@ -280,8 +282,9 @@ body {
 } */
 
 /* SECTIONS */
+
 .section {
-  padding: 80px 0;
+  padding: 40px 0 !important;
   text-align: center;
   background: white;
 }
@@ -296,7 +299,7 @@ body {
   }
 
   .testimonials-section {
-    padding: 40px 0 !important;
+    padding: 25px 0 !important;
   }
 }
 
@@ -305,6 +308,7 @@ body {
 }
 
 /* CARDS */
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -346,6 +350,7 @@ body {
 }
 
 /* Service buttons */
+
 .first,
 .second,
 .third,
@@ -410,6 +415,7 @@ body {
 }
 
 /* Visa Services Grid */
+
 .visa-services-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -479,6 +485,7 @@ body {
 }
 
 /* STEPS */
+
 .steps {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -508,8 +515,10 @@ body {
 /* BUTTON CLASSES */
 
 /* None yet */
+/* EDIT: There are a few somewhere, just search "lmbtn" here or in app.css idk exactly */
 
 /* STATISTICS SECTION */
+
 .stats-section {
   background: linear-gradient(135deg, #1d4e50 0%, #36948c 100%);
   padding: 80px 0;
@@ -565,6 +574,7 @@ body {
 }
 
 /* DESTINATIONS */
+
 .destinations-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -628,16 +638,17 @@ body {
   margin-right: 10px;
 }
 
-/* WHY CHOOSE US - ENHANCED */
+/* WHY CHOOSE US */
+
 .why-choose-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
   margin-top: 40px;
 }
 
 .home-feature-card {
-  background: white;
+  background: rgb(255, 255, 255);
   border-radius: 15px;
   padding: 30px;
   text-align: center;
@@ -663,13 +674,13 @@ body {
 .home-feature-card p {
   color: #333;
   line-height: 1.6;
-  margin: 0;
+  margin:5px;
 }
 
 /* TESTIMONIALS */
 .testimonials-section {
   background: #f8f9fa;
-  padding: 80px 0;
+  padding: 20px 0 !important;
 }
 
 .testimonials-grid {
@@ -733,7 +744,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .process-step {
@@ -820,6 +831,7 @@ body {
 }
 
 /* RESPONSIVE ENHANCEMENTS */
+
 @media (max-width: 991px) {
   .hero {
     padding: 60px 0;
@@ -866,31 +878,36 @@ body {
 
   .why-choose-grid {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 10px;
+    gap: 8px;
+    margin-bottom: -40px;
   }
 
   .home-feature-card {
-    padding: 12px 8px !important;
+    padding: 10px 6px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    padding: 10px !important;
   }
 
   .home-feature-icon {
-    font-size: 1.2rem !important;
-    margin-bottom: 8px !important;
-  }
-
-  .home-feature-card h3 {
-    font-size: 0.75rem !important;
+    font-size: 1.6rem !important;
     margin-bottom: 6px !important;
   }
 
+  .home-feature-card h3 {
+    font-size: 1.1rem !important;
+    margin-bottom: 4px !important;
+    margin-bottom: 10px !important;
+  }
+
   .home-feature-card p {
-    font-size: 0.65rem !important;
-    line-height: 1.25 !important;
+    font-size: 0.8rem !important;
+    line-height: 1.2 !important;
   }
 
   .process-steps {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 10px;
+    margin-bottom: -40px;
   }
 
   .process-step {
@@ -905,12 +922,13 @@ body {
   }
 
   .process-step h3 {
-    font-size: 0.85rem;
+    font-size: 1.3rem !important;
     margin-bottom: 8px;
+    margin-top: 8px;
   }
 
   .process-step p {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     line-height: 1.3;
   }
   
@@ -941,6 +959,7 @@ body {
 
 
 /* Mobile Form Popup */
+
 .form-popup-overlay {
   display: none;
   position: fixed;
@@ -950,7 +969,6 @@ body {
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
   z-index: 9999;
-  animation: fadeIn 0.3s ease;
 }
 
 .form-popup-overlay.active {
@@ -958,6 +976,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 20px;
+  animation: fadeIn 0.3s ease;
 }
 
 .form-popup-content {
@@ -969,7 +988,8 @@ body {
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
-  animation: slideUp 0.3s ease;
+  animation: popIn 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+  transform-origin: center center !important;
 }
 
 .form-popup-close {
@@ -992,9 +1012,15 @@ body {
   to { opacity: 1; }
 }
 
-@keyframes slideUp {
-  from { transform: translateY(50px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+@keyframes popIn {
+  from { 
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to { 
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @media (min-width: 992px) {
@@ -1013,6 +1039,7 @@ body {
 
 
 /* Brand Name */
+
 .brand-name {
   font-size: 3rem;
   font-weight: 800;

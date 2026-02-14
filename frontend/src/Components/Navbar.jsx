@@ -1,8 +1,26 @@
 import React from "react";
 import "../Styles/Navbar.css";
 import { Link } from "react-router-dom";
+import StaggeredMenu from "./StraggeredMenu";
 
 export default function Navbar() {
+  
+  // Straggered Menu Stuff 
+
+  const menuItems = [
+    { label: 'Migrate', ariaLabel: 'Navigate to Migrate page', link: '/migrate' },
+    { label: 'Work', ariaLabel: 'Navigate to Work page', link: '/work' },
+    { label: 'Study', ariaLabel: 'Navigate to Study page', link: '/study' },
+    { label: 'Visa', ariaLabel: 'Navigate to Visa page', link: '/visa' },
+    { label: 'Coaching', ariaLabel: 'Navigate to Coaching page', link: '/coaching' },
+    { label: 'About Us', ariaLabel: 'Navigate to About page', link: '/about' },
+  ];
+
+  const socialItems = [
+    { label: 'Facebook', link: 'https://facebook.com' },
+    { label: 'Instagram', link: 'https://instagram.com' },
+    { label: 'LinkedIn', link: 'https://linkedin.com' }
+  ];
   function Page() {
     window.scrollTo(0, 0);
   }
@@ -16,14 +34,31 @@ export default function Navbar() {
   return (
     <div className="">
       <nav className="navbar navbar-expand-lg navbar-custom py-lg-3 py-md-2 py-2">
-        <button
+        {/* <button
           className="navbar-toggler ms-2 px-1 py-0 border-0"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
         >
           <span className="navbar-toggler-icon"></span>
-        </button>
+        </button> */}
+        
+        <div className="d-lg-none" style={{ position: 'fixed', top: 0, right: 0, zIndex: 9999 }}>
+          <StaggeredMenu
+            position="right"
+            items={menuItems}
+            socialItems={socialItems}
+            displaySocials
+            displayItemNumbering={true}
+            menuButtonColor="#1d4e50"
+            openMenuButtonColor="#000"
+            changeMenuColorOnOpen={true}
+            colors={['#1d4e50', '#36948c']}
+            accentColor="#36948c"
+            onMenuOpen={() => console.log('Menu opened')}
+            onMenuClose={() => console.log('Menu closed')}
+          />
+        </div>
 
         <Link
           className="navbar-brand ms-lg-4 mx-auto mx-lg-4 d-flex align-items-center"
