@@ -75,6 +75,10 @@
   height: 100%;
 }
 
+.benefit-card h4 {
+  text-align: center;
+}
+
 .benefit-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
@@ -153,10 +157,131 @@
 }
 
 @media (max-width: 768px) {
+  .migrate-hero {
+    padding: 60px 0;
+  }
+
+  .migrate-form {
+    flex-direction: column;
+  }
+
+  .migrate-form .form-select,
+  .migrate-form .form-control,
+  .migrate-form .btn {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  /* Benefits Section - 2x2 Grid */
+  .benefit-card {
+    padding: 15px 10px !important;
+    text-align: center !important;
+  }
+
+  .benefit-icon {
+    font-size: 1.5rem !important;
+    margin-bottom: 8px !important;
+  }
+
+  .benefit-card h4 {
+    font-size: 0.9rem !important;
+    margin-bottom: 6px !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .benefit-card p {
+    font-size: 0.8rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Process Steps - 3x2 Grid */
+  .process-step {
+    padding: 12px 8px !important;
+  }
+
+  .step-number {
+    width: 35px !important;
+    height: 35px !important;
+    font-size: 1rem !important;
+    margin-bottom: 8px !important;
+  }
+
+  .process-step h6 {
+    font-size: 0.9rem !important;
+    margin-bottom: 4px !important;
+  }
+
+  .process-step p {
+    font-size: 0.8rem !important;
+  }
+
+  /* Popular Destinations - 2x2 Grid */
+  .popular-destinations .card-body {
+    padding: 12px 8px !important;
+  }
+
+  .popular-destinations .country-flag {
+    font-size: 1.8rem !important;
+    margin-bottom: 8px !important;
+  }
+
+  .popular-destinations .card-title {
+    font-size: 0.9rem !important;
+    margin-bottom: 6px !important;
+  }
+
+  .popular-destinations .badge {
+    font-size: 0.8rem !important;
+    padding: 0.2rem 0.4rem !important;
+    margin-bottom: 6px !important;
+  }
+
+  .popular-destinations .text-muted {
+    font-size: 0.8rem !important;
+  }
+
+  /* Why Choose Section - 2x2 Grid */
   .feature-badge {
-    width: 50px;
-    height: 50px;
-    font-size: 1.3rem;
+    width: 45px !important;
+    height: 45px !important;
+    font-size: 1.2rem !important;
+    margin-bottom: 8px !important;
+  }
+
+  .text-center.p-3 {
+    padding: 12px 8px !important;
+  }
+
+  .text-center.p-3 h5 {
+    font-size: 0.9rem !important;
+    margin-bottom: 6px !important;
+  }
+
+  .text-center.p-3 p {
+    font-size: 0.8rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Liba Section */
+  .liba-highlight-box {
+    padding: 1.5rem !important;
+  }
+
+  .liba-highlight-title {
+    font-size: 1.1rem !important;
+  }
+
+  .liba-highlight-text {
+    font-size: 0.85rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .liba-highlight-btn {
+    font-size: 0.9rem !important;
+    padding: 0.7rem 1.5rem !important;
   }
 }
 
@@ -297,9 +422,10 @@
   }
 
   /* Make text smaller and fit in one line */
-  h5 {
-    font-size: 0.8rem !important;
+  h4 {
+    font-size: 0.9rem !important;
     line-height: 1.1;
+    font-weight: 500;
   }
 
   .card-title {
@@ -318,7 +444,7 @@
   }
 
   p.text-muted {
-    font-size: 0.65rem !important;
+    font-size: 0.8rem !important;
     line-height: 1.2;
   }
 }
@@ -375,12 +501,12 @@
   }
   
   .liba-highlight-title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: center;
   }
   
   .liba-highlight-text {
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-align: center;
   }
 }

@@ -886,6 +886,7 @@ body {
     padding: 10px 6px !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     padding: 10px !important;
+    text-align: center !important;
   }
 
   .home-feature-icon {
@@ -894,9 +895,12 @@ body {
   }
 
   .home-feature-card h3 {
-    font-size: 1.1rem !important;
-    margin-bottom: 4px !important;
-    margin-bottom: 10px !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 6px !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    display: block !important;
+    width: 100% !important;
   }
 
   .home-feature-card p {

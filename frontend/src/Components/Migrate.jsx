@@ -126,28 +126,28 @@ export default function Migrate() {
             <div className="col-6 col-md-6 col-lg-3">
               <div className="benefit-card text-center p-4">
                 <FaBriefcase className="benefit-icon text-primary mb-3" />
-                <h5>Career Growth</h5>
+                <h4>Career Growth</h4>
                 <p className="text-muted small mb-0">Access to excellent global career opportunities</p>
               </div>
             </div>
             <div className="col-6 col-md-6 col-lg-3">
               <div className="benefit-card text-center p-4">
                 <FaHome className="benefit-icon text-success mb-3" />
-                <h5>Better Living</h5>
+                <h4>Better Living</h4>
                 <p className="text-muted small mb-0">Experience higher standard of living</p>
               </div>
             </div>
             <div className="col-6 col-md-6 col-lg-3">
               <div className="benefit-card text-center p-4">
                 <FaGraduationCap className="benefit-icon text-info mb-3" />
-                <h5>Quality Education</h5>
+                <h4>Quality Education</h4>
                 <p className="text-muted small mb-0">World-class healthcare and education</p>
               </div>
             </div>
             <div className="col-6 col-md-6 col-lg-3">
               <div className="benefit-card text-center p-4">
                 <FaGlobeAmericas className="benefit-icon text-warning mb-3" />
-                <h5>Citizenship Path</h5>
+                <h4>Citizenship Path</h4>
                 <p className="text-muted small mb-0">Permanent residency and citizenship options</p>
               </div>
             </div>
