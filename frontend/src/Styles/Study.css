@@ -551,68 +551,204 @@
 
 @media (max-width: 768px) {
   .study-page .study-hero {
-    padding: 80px 0;
+    padding: 60px 0;
   }
 
   .study-page .hero-text h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+  }
+
+  .study-page .hero-text p {
+    font-size: 1rem;
   }
 
   .study-page .hero-stats {
-    flex-direction: column;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
   }
 
-  .study-page .benefits-grid,
-  .study-page .services-grid,
-  .study-page .success-stories {
+  .study-page .stat {
+    padding: 10px 5px;
+  }
+
+  .study-page .stat-number {
+    font-size: 1.8rem;
+  }
+
+  .study-page .stat-label {
+    font-size: 0.85rem;
+  }
+
+  /* Benefits Grid - 2x2 */
+  .study-page .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .study-page .benefit-card {
+    padding: 12px 8px !important;
+  }
+
+  .study-page .benefit-icon {
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 1.2rem !important;
+    margin: 0 auto 6px !important;
+  }
+
+  .study-page .benefit-card h3 {
+    font-size: 0.9rem !important;
+    margin-bottom: 6px !important;
+  }
+
+  .study-page .benefit-card p {
+    font-size: 0.8rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Services Grid - Stack on mobile */
+  .study-page .services-grid {
     grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .study-page .service-card {
+    padding: 15px !important;
   }
 
   .study-page .service-icon {
-    margin: 0 auto 20px;
+    font-size: 2rem !important;
+    margin: 0 auto 10px;
   }
 
+  .study-page .service-card h3 {
+    font-size: 1rem !important;
+    margin-bottom: 8px !important;
+  }
+
+  .study-page .service-card p {
+    font-size: 0.85rem !important;
+    margin-bottom: 10px !important;
+  }
+
+  .study-page .service-features li {
+    font-size: 0.8rem !important;
+    padding: 4px 0 !important;
+  }
+
+  /* Countries Grid - 2x3 */
   .study-page .countries-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  /* Success Stories - 2 column then 1 */
+  .study-page .success-stories {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .study-page .story-card {
+    padding: 12px 8px !important;
+  }
+
+  .study-page .story-avatar {
+    font-size: 2rem !important;
+    margin-bottom: 8px !important;
+  }
+
+  .study-page .story-card h4 {
+    font-size: 0.9rem !important;
+    margin-bottom: 4px !important;
+  }
+
+  .study-page .story-destination {
+    font-size: 0.8rem !important;
+    margin-bottom: 8px !important;
+  }
+
+  .study-page .story-card p {
+    font-size: 0.8rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .study-page .story-program {
+    font-size: 0.75rem !important;
+    padding: 6px 10px !important;
+  }
+
+  /* Process Timeline - 2 column */
+  .study-page .process-timeline {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
   }
 
   .study-page .process-timeline::before {
-    left: 15px;
-  }
-
-  .study-page .timeline-number {
-    width: 30px;
-    height: 30px;
-    font-size: 0.9rem;
-    margin-right: 20px;
-  }
-
-  .study-page .timeline-content {
-    padding: 20px;
-  }
-
-  .study-page .timeline-content h3 {
-    font-size: 1.2rem;
+    display: none;
   }
 
   .study-page .timeline-item {
-    margin-bottom: 35px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .study-page .timeline-number {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .study-page .timeline-content {
+    padding: 12px 8px;
+  }
+
+  .study-page .timeline-content h3 {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+  }
+
+  .study-page .timeline-content p {
+    font-size: 0.8rem;
+    line-height: 1.2;
+  }
+
+  /* CTA Section */
+  .study-page .study-cta {
+    padding: 40px 0;
+  }
+
+  .study-page .cta-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .study-page .cta-content p {
+    font-size: 0.95rem;
   }
 
   .study-page .cta-buttons {
     flex-direction: column;
-    align-items: center;
+    gap: 15px;
   }
 
-  .study-page .cta-content h2 {
-    font-size: 2rem;
+  .study-page .cta-buttons .lmbtn,
+  .study-page .cta-buttons .lmbtn-outline {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .study-page .hero-text h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .study-page .hero-text p {
@@ -620,85 +756,57 @@
   }
   
   .study-page .hero-image {
-    height: 300px;
+    height: 250px;
   }
 
-  .study-page .floating-card {
-    padding: 12px;
-    font-size: 0.85rem;
-    width: 200px !important;
-    height: 60px !important;
-    gap: 10px !important;
+  .study-page .hero-stats {
+    grid-template-columns: 1fr;
   }
-  
+
   .study-floating-card {
-    padding: 12px !important;
-    width: 200px !important;
-    height: 60px !important;
-    gap: 10px !important;
-    font-size: 0.85rem !important;
+    padding: 10px !important;
+    width: 180px !important;
+    height: 50px !important;
+    gap: 8px !important;
+    font-size: 0.8rem !important;
   }
   
   .study-page .card-icon {
-    font-size: 1.2rem !important;
+    font-size: 1rem !important;
   }
 
-  .study-page .floating-card:nth-child(1) {
+  .study-page .floating-card:nth-child(1),
+  .study-floating-card:nth-child(1) {
     top: 8%;
     left: 3%;
   }
 
-  .study-page .floating-card:nth-child(2) {
+  .study-page .floating-card:nth-child(2),
+  .study-floating-card:nth-child(2) {
     top: 42%;
     right: 3%;
   }
 
-  .study-page .floating-card:nth-child(3) {
+  .study-page .floating-card:nth-child(3),
+  .study-floating-card:nth-child(3) {
     bottom: 8%;
     left: 3%;
   }
 
-  .study-page .timeline-item {
-    flex-direction: column;
-    margin-bottom: 30px;
-    align-items: center;
-    text-align: center;
-  }
-
-  .study-page .timeline-number {
-    margin-bottom: 15px;
-    margin-right: 0;
-  }
-
-  .study-page .process-timeline::before {
-    display: none;
-  }
-
-  .study-page .timeline-content {
-    padding: 18px;
-  }
-
-  .study-page .timeline-content h3 {
-    font-size: 1.1rem;
-  }
-
-  .study-page .timeline-content p {
-    font-size: 0.95rem;
-  }
-
-  .study-page .benefit-card,
-  .study-page .service-card,
-  .study-page .country-card,
-  .study-page .story-card {
-    padding: 20px;
+  /* Stack grids to single column */
+  .study-page .benefits-grid,
+  .study-page .countries-grid,
+  .study-page .success-stories,
+  .study-page .process-timeline {
+    grid-template-columns: 1fr !important;
   }
 
   .study-page .cta-content h2 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
 
   .study-page .cta-content p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 
