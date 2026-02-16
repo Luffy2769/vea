@@ -14,11 +14,12 @@ export default function Navbar() {
     { label: 'Visa', ariaLabel: 'Navigate to Visa page', link: '/visa' },
     { label: 'Coaching', ariaLabel: 'Navigate to Coaching page', link: '/coaching' },
     { label: 'About Us', ariaLabel: 'Navigate to About page', link: '/about' },
+    { label: 'Visit', ariaLabel: 'Navigate to visit page', link: '/visit' },
   ];
 
   const socialItems = [
-    { label: 'Facebook', link: 'https://facebook.com' },
-    { label: 'Instagram', link: 'https://instagram.com' },
+    { label: 'Facebook', link: 'https://www.facebook.com/libamigration?mibextid=wwXIfr&mibextid=wwXIfr' },
+    { label: 'Instagram', link: 'https://www.instagram.com/liba_migration?igsh=eDRkdXR3NWozZTdr' },
     { label: 'LinkedIn', link: 'https://linkedin.com' }
   ];
   function Page() {

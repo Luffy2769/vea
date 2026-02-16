@@ -352,7 +352,7 @@ export default function Coaching() {
               <div className="feature-icon">
                 <FaBookOpen />
               </div>
-              <h3>Comprehensive Materials</h3>
+              <h3>Diverse Materials</h3>
               <p>Access to latest IELTS preparation books, online resources, and practice tests.</p>
             </div>
             <div className="feature-card">
