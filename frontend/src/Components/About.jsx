@@ -330,10 +330,6 @@ export default function About() {
               <div className="achievement-number">35+</div>
               <div className="achievement-label">Years Experience</div>
             </div>
-            <div className="achievement-item">
-              <div className="achievement-number">25+</div>
-              <div className="achievement-label">Expert Consultants</div>
-            </div>
           </div>
         </div>
       </section>

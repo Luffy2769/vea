@@ -11,7 +11,7 @@
 }
 
 .about-hero::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -27,6 +27,7 @@
   color: #1d4e50;
   margin-bottom: 1.5rem;
   line-height: 1.2;
+  margin-top: -20px;
 }
 
 .hero-subtitle {
@@ -89,9 +90,10 @@
 
 @media (max-width: 991px) {
   .about-hero-image {
-    margin-top: 2rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
   }
-  
+
   .about-hero-image img {
     height: 250px;
   }
@@ -445,58 +447,286 @@
   .hero-title {
     font-size: 2.5rem;
   }
-  
-  .hero-highlights {
-    margin-top: 2rem;
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    color: #6c757d;
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+    text-align: justify;
   }
-  
+
+  .hero-highlights {
+    margin-top: 1rem;
+  }
+
   .highlight-item {
     flex-direction: column;
     text-align: center;
-    gap: 0.5rem;
+    gap: 0.2rem;
   }
-  
+
+  .highlight-item span {
+    font-size: 0.9rem !important;
+    font-weight: 500;
+    color: #1d4e50;
+  }
+
+  .highlight-icon {
+    font-size: 1rem !important;
+    color: #36948c;
+  }
   .highlight-item:hover {
     transform: translateY(-3px);
   }
-  
+
+  /* MISSON & VISION */
+
+  .card-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #1d4e50, #36948c);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    color: white;
+    font-size: 1rem;
+  }
+  .mission-vision h3 {
+    color: #1d4e50;
+    margin-bottom: 1.2rem !important;
+    font-size: 1.4rem !important;
+    font-weight: 600;
+  }
+  .mission-vision p {
+    color: #6c757d;
+    font-size: 0.9rem !important;
+    line-height: 1.7 !important;
+  }
+
+  /* Values Section */
   .values-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1rem;
+    gap: 1rem;
   }
-  
+
+  .value-item {
+    text-align: center;
+    padding: 0.5rem 1rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
+
+  .value-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #1d4e50, #36948c);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.5rem;
+    color: white;
+    font-size: 1rem;
+  }
+
+  .value-item h4 {
+    color: #1d4e50;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .value-item p {
+    color: #6c757d;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  /* Leadership Section */
+
+  .leader-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    transition: all 0.3s ease;
+  }
+
+  .leader-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .leader-header {
+    border-bottom: 3px solid #36948c;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .leader-header h3 {
+    color: #1d4e50;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .leader-title {
+    color: #36948c;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .leader-content p {
+    color: #6c757d;
+    font-size: 0.9rem !important;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    text-align: justify;
+  }
+
+  /* Achievments Section */
+
   .achievements-grid {
-    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem !important;
+    margin-top: 2rem !important;
   }
-  
+
+  .achievement-item {
+    text-align: center;
+    padding: 1rem !important;
+    background: linear-gradient(135deg, #1d4e50, #36948c);
+    color: white;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+  }
+
+  .achievement-item:hover {
+    transform: translateY(-5px);
+  }
+
+  .achievement-number {
+    font-size: 2rem !important;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .achievement-label {
+    font-size: 0.8rem !important;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* Certifications Section */
+
+  .cert-card {
+  background: white;
+  border-radius: 12px;
+  padding: 0.5rem;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cert-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.cert-icon {
+  font-size: 2rem !important;
+  color: #36948c;
+  margin-bottom: 0.5rem;
+  margin: auto;
+}
+
+.cert-card h5 {
+  color: #1d4e50;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  margin: auto;
+  font-weight: 600;
+}
+
+.cert-card p {
+  color: #6c757d;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+  /* CTA Section */
   .cta-buttons {
     flex-direction: column;
     align-items: center;
   }
+
+  .cta-section {
+  background: linear-gradient(135deg, #1d4e50 0%, #36948c 100%);
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.cta-content h2 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1.3rem !important;
+  font-weight: 600;
+}
+
+.cta-content p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem !important;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 0.5rem !important;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 }
 
 @media (max-width: 480px) {
   .hero-title {
     font-size: 2rem;
   }
-  
+
   .mission-card,
   .vision-card {
     padding: 2rem 1.5rem;
   }
-  
+
   .team-info {
     padding: 1.5rem;
   }
-  
+
   .achievements-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
-  
+
   .achievement-number {
-    font-size: 2.5rem;
+    font-size: 2rem !important;
   }
 }
-
 
 /* Leadership Section */
 .leadership {

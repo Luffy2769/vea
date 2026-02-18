@@ -11,7 +11,7 @@
 }
 
 .visit-hero::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -146,7 +146,7 @@
 }
 
 .visit-features li::before {
-  content: '✓';
+  content: "✓";
   position: absolute;
   left: 0;
   color: #36948c;
@@ -220,7 +220,7 @@
 }
 
 .visit-process-timeline::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 30px;
   left: 120px;
@@ -350,9 +350,10 @@
 /* Responsive Design */
 @media (max-width: 991px) {
   .visit-hero-image {
-    margin-top: 2rem;
+    margin-top: 1rem !important;
+    margin-bottom: -3rem !important;
   }
-  
+
   .visit-hero-image img {
     height: 250px;
     width: 100% !important;
@@ -364,36 +365,36 @@
   .hero-title {
     font-size: 2.5rem;
   }
-  
+
   .hero-stats {
     justify-content: center;
     gap: 1rem;
   }
-  
+
   .visit-hero-image img {
     height: 200px;
     width: 100% !important;
     max-width: 100% !important;
   }
-  
+
   .visit-process-timeline {
     flex-direction: column;
     gap: 2rem;
   }
-  
+
   .visit-process-timeline::before {
     display: none;
   }
-  
+
   .destinations-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .cta-buttons {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .destination-info {
     flex-direction: column;
     gap: 0.5rem;
@@ -404,17 +405,17 @@
   .hero-title {
     font-size: 2rem;
   }
-  
+
   .visit-hero-image img {
     height: 150px;
     width: 100% !important;
     max-width: 100% !important;
   }
-  
+
   .visit-card {
     padding: 1.5rem;
   }
-  
+
   .destination-item {
     padding: 1.5rem;
   }
